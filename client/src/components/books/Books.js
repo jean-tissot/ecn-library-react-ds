@@ -51,8 +51,8 @@ export default class Books extends Component {
               <tr>
                 <th className="fit-content">#</th>
                 <th>Title</th>
-                <th className="hidden-if-needed">Authors</th>
-                <th className="fit-content">Availability</th>
+                <th className="hidden-if-needed-850">Authors</th>
+                <th className="fit-content hidden-if-needed-650">Availability</th>
                 <th></th>
               </tr>
             </thead>

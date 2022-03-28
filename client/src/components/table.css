@@ -41,3 +41,23 @@ th, td {
     visibility: collapse;
   }
 }
+
+@media(max-width: 850px) {
+  .hidden-if-needed-850 {
+    display:none;
+    width:0;
+    height:0;
+    opacity:0;
+    visibility: collapse;
+  }
+}
+
+@media(max-width: 650px) {
+  .hidden-if-needed-650 {
+    display:none;
+    width:0;
+    height:0;
+    opacity:0;
+    visibility: collapse;
+  }
+}

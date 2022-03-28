@@ -26,8 +26,8 @@ export default class Book extends Component {
             <tr>
                 <td className="fit-content">{book.id}</td>
                 <td>{book.title}</td>
-                <td className="hidden-if-needed">{book.authors}</td>
-                <td className="fit-content">{book.available ? "Available" : "Unavailable"}</td>
+                <td className="hidden-if-needed-850">{book.authors}</td>
+                <td className="fit-content hidden-if-needed-650">{book.available ? "Available" : "Unavailable"}</td>
                 <td className="fit-content">
                     <Link to={"/books/edit/" + book.id}> <button className="edit" disabled={book.available===0} title={editTooltip}>edit</button> </Link>
                     {lastButtonLine}
