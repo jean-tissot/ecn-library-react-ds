@@ -4,6 +4,7 @@ CREATE TABLE public.book (
                 id SERIAL NOT NULL,
                 title VARCHAR(256) NOT NULL,
                 authors VARCHAR(256) NOT NULL,
+                available INTEGER NOT NULL DEFAULT 1,
                 CONSTRAINT pk_book PRIMARY KEY (id)
 );
 

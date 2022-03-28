@@ -74,14 +74,14 @@ app.delete("/user", function(req, res) {
 
 // GET /books
 app.get("/books", function(req, res) {
-    var sqlRequest = "SELECT id, title, authors FROM book";
+    var sqlRequest = "SELECT id, title, authors, available FROM book";
     returnSQLResult(res, sqlRequest);
 });
 
 // GET /book?id=
 app.get("/book", function(req, res) {
 	var values = [req.query.id];
-	var sqlRequest = "SELECT * FROM book  WHERE id=$1";
+	var sqlRequest = "SELECT id, title, authors, available FROM book  WHERE id=$1";
 	returnSQLResult(res, sqlRequest, values);
 });
 
@@ -102,7 +102,7 @@ app.post("/book", function(req, res) {
 // DELETE /book?id=
 app.delete("/book", function(req, res) {
     var values = [req.query.id]
-    var sqlRequest = "DELETE FROM book where id=$1"
+    var sqlRequest = "UPDATE book SET available=0  WHERE id=$1  RETURNING id"
     returnSQLResult(res, sqlRequest, values);
 });
 
