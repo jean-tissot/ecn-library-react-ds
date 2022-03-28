@@ -1,0 +1,41 @@
+/** Modal popup **/
+
+/* The dark transparent background under the modal content (popup) */
+.modal-background {
+    position: fixed;
+    z-index: 1;
+    padding-top: 20vh; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: var(--modal-background-color); 
+  }
+
+/* The modal popup */
+.modal-popup {
+    background-color: var(--modal-content-background-color);
+    margin: auto;
+    padding: 20px;
+    border: 2px solid var(--modal-content-border-color);
+    width: 90%;
+    max-width: 560px;
+  }
+
+  
+/* The close button of the modal popup */
+.close {
+    color: var(--modal-close-color);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: -10px;
+  }
+  
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

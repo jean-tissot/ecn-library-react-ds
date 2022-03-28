@@ -1,0 +1,43 @@
+table {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+  width: 100%;
+}
+
+tr {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+
+th {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+td {
+  color: var(--primary-color);
+  height: 35px;
+}
+
+td.container {
+  text-align: center;
+}
+ 
+
+td.fit-content {
+  width: 1%;
+}
+
+th, td {
+  white-space: nowrap;
+}
+
+@media(max-width: 600px) {
+  .hidden-if-needed {
+    display:none;
+    width:0;
+    height:0;
+    opacity:0;
+    visibility: collapse;
+  }
+}

@@ -1,0 +1,30 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; 
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+li {
+    float: left;
+}
+
+li a {
+    color: var(--grey-typo);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    height: var(--navbar-height);
+    display: table-cell;
+    vertical-align: middle;
+}
+
+li a:hover {
+    background-color: var(--primary-color-hover);
+}
+
+li .active {
+    background-color: var(--primary-color-active);
+}

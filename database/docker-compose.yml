@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+  postgres:
+    image: postgres
+    container_name: "tp-library-db"
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=password
+    volumes:
+      - ./init:/docker-entrypoint-initdb.d:z
+    ports:
+      - 5432:5432
+    networks:
+      - postgres
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: "tp-library-pgadmin"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@pgadmin.com
+      PGADMIN_DEFAULT_PASSWORD: password
+      PGADMIN_LISTEN_PORT: 80
+      PGPASSFILE: /pgadmin4/pgpass.conf
+      USER: pgadmin
+    volumes:
+      - ./config/servers.json:/pgadmin4/servers.json:z
+      - ./config/pgpass.conf:/tmp/pgpass.conf:z
+    ports:
+      - 15432:80
+    depends_on:
+      - postgres
+    networks:
+      - postgres
+networks:
+  postgres:
+    name: postgres

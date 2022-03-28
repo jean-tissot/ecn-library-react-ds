@@ -1,0 +1,159 @@
+@import "modal.css";
+@import "navigation.css";
+
+:root {
+  --body-background-color: #222527;
+  --background-color: #30353a;
+  --select-background-color: #292d30;
+  --text-color: rgb(228, 227, 227);
+  --primary-color: rgb(153, 71, 33);
+  --primary-color-hover: rgb(124, 58, 27);
+  --primary-color-active: rgb(99, 45, 21);
+  --invalid-color: rgb(196, 0, 0);
+
+  /* colors for buttons */
+  --border-color: #c9bab1;
+  --border-disabled-color: #74716e;
+  --add-color: rgb(7, 94, 7);
+  --add-hover-color: rgb(3, 49, 3);
+  --add-disabled-color: rgb(48, 65, 48);
+  --edit-color: rgb(156, 134, 9);
+  --edit-hover-color: rgb(136, 117, 9);
+  --delete-color: rgb(168, 25, 0);
+  --delete-hover-color: rgb(143, 21, 0);
+
+  /* colors for modal popups */
+  --modal-background-color: rgba(0,0,0,0.4);
+  --modal-content-background-color: #2a2c30;
+  --modal-content-border-color: #888;
+  --modal-close-color: #aaaaaa;
+
+  --navbar-height: 22px;
+}
+
+body {
+  background-color: var(--body-background-color);
+  color: var(--primary-color);
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+}
+
+.app-container {
+  top: calc(var(--navbar-height) + 30px);
+  bottom:0;
+  position:fixed;
+  overflow-y:auto;
+  overflow-x:hidden;
+  width: 100%;
+  height: 100%;
+  /* margin-top: calc(var(--navbar-height) + 30px); */
+}
+
+.app {
+  padding: 20px 5%;
+  text-align: center;
+  width: 90%;
+}
+
+@media (min-width: 800px) {
+  .split-content {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    column-gap: 5%;
+  }
+}
+
+h1 {
+  margin: 10px 0px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.center-content {
+  display: flex;
+  justify-content: center;
+}
+
+.space-top {
+  margin-top: 20px;
+}
+
+.padding {
+  padding: 10px;
+}
+
+.match-content {
+  display: inline-block;
+}
+
+.background-colored {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+}
+
+/** Buttons **/
+
+button {
+  color: var(--text-color);
+  background-color: var(--primary-color);
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  margin: 5px;
+}
+
+button:focus {
+  border: 3px solid var(--border-color);
+  margin: 3px;
+}
+
+button.bottom-button {
+  margin-top: 10px;
+  margin-bottom: 50px;
+}
+
+button.validate {
+  background-color: var(--add-color);
+}
+
+button.add:hover, button.validate:hover {
+  background-color: var(--add-hover-color);
+}
+
+button.validate:disabled {
+  background-color: var(--add-disabled-color);
+  border-color: var(--border-disabled-color);
+}
+
+button.edit {
+  background-color: var(--edit-color);
+}
+
+button.edit:hover {
+  background-color: var(--edit-hover-color);
+}
+
+button.delete {
+  background-color: var(--delete-color);
+}
+
+button.delete:hover {
+  background-color: var(--delete-hover-color);
+}
+
+select {
+  background-color: var(--body-background-color);
+  color: var(--primary-color);
+  border-radius: 5%;
+  font-size: medium;
+}
+
+select:hover {
+  background-color: var(--background-color);
+}
+

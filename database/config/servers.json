@@ -1,0 +1,14 @@
+{
+    "Servers": {
+        "1": {
+            "Name": "env_sql",
+            "Group": "Servers",
+            "Port": 5432,
+            "Username": "postgres",
+            "Host": "tp-library-db",
+            "PassFile": "/pgadmin4/pgpass.conf",
+            "SSLMode": "prefer",
+            "MaintenanceDB": "postgres"
+        }
+    }
+}

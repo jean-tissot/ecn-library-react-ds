@@ -1,0 +1,57 @@
+form.login {
+  margin: 100px auto 0;
+  width: 300px;
+  padding: 20px;
+  background: var(--background-color);
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+input {
+  display: block;
+  width: inherit;
+  padding: 2px;
+  background: rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--primary-border-color);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset;
+  border-radius: 3px;
+  font-size: 14px;
+  color: var(--text-color);
+}
+
+input:invalid:not(:focus) {
+  border-color: var(--invalid-color);
+}
+
+p.error {
+  color: var(--invalid-color);
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+p.success {
+  color: #83bd41;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+p {
+  width: inherit;
+  margin: 5px 0;
+  color: #999;
+}
+
+button.large {
+  display: block;
+  width: 100%;
+  padding: 2px auto;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  border: 1px solid var(--primary-border-color);
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+}
