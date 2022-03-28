@@ -74,7 +74,7 @@ app.delete("/user", function(req, res) {
 
 // GET /books
 app.get("/books", function(req, res) {
-    var sqlRequest = "SELECT id, title, authors, available FROM book";
+    var sqlRequest = "SELECT id, title, authors, available FROM book  ORDER BY available DESC, title";
     returnSQLResult(res, sqlRequest);
 });
 
