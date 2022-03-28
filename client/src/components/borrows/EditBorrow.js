@@ -12,7 +12,7 @@ class EditBorrow extends Component {
         this.setChosenBook = this.setChosenBook.bind(this);
         this.saveBorrow = this.saveBorrow.bind(this);
         this.close = this.close.bind(this);
-        BookService.loadBooks().then(books => this.setState({books: books}));
+        BookService.loadBooks().then(books => this.setState({books: books.filter(book => book.available===1)}));
     }
 
     setChosenBook(event) {
