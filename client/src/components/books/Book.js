@@ -1,7 +1,18 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { BookService } from "../../services/RestService";
+import Books from "./Books";
 
 export default class Book extends Component {
+
+    constructor(props) {
+        super(props);
+        this.reAdd = this.reAdd.bind(this);
+    }
+
+    reAdd() {
+        BookService.reAdd(this.props.book.id).then(() => Books.reloadBooks());
+    }
 
     render() {
         let book = this.props.book;
@@ -10,7 +21,7 @@ export default class Book extends Component {
         let reAddTooltip = "This book will be available again";
         var lastButtonLine = book.available===1 ?
             <Link to={"/books/delete/" + book.id}><button className="delete" title={deleteTooltip}>delete</button></Link> :
-            <button className="validate" title={reAddTooltip}>re-add</button>
+            <button className="validate" title={reAddTooltip} onClick={this.reAdd}>re-add</button>
         return (
             <tr>
                 <td className="fit-content">{book.id}</td>

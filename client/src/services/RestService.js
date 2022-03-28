@@ -69,6 +69,10 @@ class BookService {
     static createOrUpdate = (book) => this.restService.createOrUpdate(book);
     static deleteBook = (id) => this.restService.deleteElement(id);
     static loadBooks = () => this.restService.loadElements();
+
+    static reAdd(id) {
+        return PUT("book/available", {id: id});
+    }
     
 }
 

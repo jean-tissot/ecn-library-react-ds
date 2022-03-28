@@ -92,6 +92,13 @@ app.put("/book", function(req, res) {
 	returnSQLResult(res, sqlRequest, values);
 });
 
+// PUT /book/available (containing an id) → makes the book available again
+app.put("/book/available", function(req, res) {
+	var values = [req.body.id];
+	var sqlRequest = "UPDATE book SET available=1  WHERE id=$1  RETURNING id";
+	returnSQLResult(res, sqlRequest, values);
+});
+
 // POST /book (without id) → creates a new book
 app.post("/book", function(req, res) {
 	var values = [req.body.title, req.body.authors];
