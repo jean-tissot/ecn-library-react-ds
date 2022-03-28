@@ -62,16 +62,6 @@ class EditUser extends Component{
         this.setState({editFinished: true});
     }
 
-    getIdLine() {
-        if(this.props.id) {
-            return (
-                <td>{this.props.id}</td>
-            )
-        } else {
-            return;
-        }
-    }
-
     render() {
         if(this.state.editFinished) {
             return(<Navigate to={this.props.redirect} />)
@@ -84,7 +74,7 @@ class EditUser extends Component{
             <div className="modal-background">
                 <div className="modal-popup">
                     <span className="close" onClick={this.close}>&times;</span>
-                    <h1>Edit the user</h1>
+                    <h1>{this.props.id ? "Edit the user" : "Create a user"}</h1>
                     <form onSubmit={this.saveUser}>
                         <table>
                             <tbody>
