@@ -19,6 +19,7 @@
   --add-disabled-color: rgb(48, 65, 48);
   --edit-color: rgb(156, 134, 9);
   --edit-hover-color: rgb(136, 117, 9);
+  --edit-disabled-color: rgb(102, 93, 39);
   --delete-color: rgb(168, 25, 0);
   --delete-hover-color: rgb(143, 21, 0);
 
@@ -136,6 +137,10 @@ button.edit {
 
 button.edit:hover {
   background-color: var(--edit-hover-color);
+}
+
+button.edit:disabled {
+  background-color: var(--edit-disabled-color);
 }
 
 button.delete {

@@ -44,14 +44,15 @@ export default class Books extends Component {
             
             <thead>
               <tr>
-                <td colSpan="4">
+                <td colSpan="5">
                   <h1>List of books</h1>
                 </td>
               </tr>
               <tr>
-                <th>#</th>
+                <th className="fit-content">#</th>
                 <th>Title</th>
-                <th>Authors</th>
+                <th className="hidden-if-needed">Authors</th>
+                <th className="fit-content">Availability</th>
                 <th></th>
               </tr>
             </thead>
